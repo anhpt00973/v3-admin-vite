@@ -83,7 +83,7 @@ createCode()
           <el-form-item prop="username">
             <el-input
               v-model.trim="loginForm.username"
-              placeholder="用户名"
+              placeholder="username"
               type="text"
               tabindex="1"
               :prefix-icon="User"
@@ -93,7 +93,7 @@ createCode()
           <el-form-item prop="password">
             <el-input
               v-model.trim="loginForm.password"
-              placeholder="密码"
+              placeholder="password"
               type="password"
               tabindex="2"
               :prefix-icon="Lock"
@@ -104,7 +104,7 @@ createCode()
           <el-form-item prop="code">
             <el-input
               v-model.trim="loginForm.code"
-              placeholder="验证码"
+              placeholder="code"
               type="text"
               tabindex="3"
               :prefix-icon="Key"

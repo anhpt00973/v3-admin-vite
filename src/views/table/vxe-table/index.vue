@@ -207,21 +207,21 @@ const xFormOpt = reactive<VxeFormProps>({
     {
       field: "username",
       title: "用户名",
-      itemRender: { name: "$input", props: { placeholder: "请输入" } }
+      itemRender: { name: "$input", props: { placeholder: "please enter" } }
     },
     {
       field: "password",
       title: "密码",
-      itemRender: { name: "$input", props: { placeholder: "请输入" } }
+      itemRender: { name: "$input", props: { placeholder: "please enter" } }
     },
     {
       align: "right",
       itemRender: {
         name: "$buttons",
         children: [
-          { props: { content: "取消" }, events: { click: () => xModalDom.value?.close() } },
+          { props: { content: "Cancel" }, events: { click: () => xModalDom.value?.close() } },
           {
-            props: { type: "submit", content: "确定", status: "primary" },
+            props: { type: "submit", content: "Submit", status: "primary" },
             events: { click: () => crudStore.onSubmitForm() }
           }
         ]
@@ -235,10 +235,10 @@ const xFormOpt = reactive<VxeFormProps>({
         required: true,
         validator: ({ itemValue }) => {
           if (!itemValue) {
-            return new Error("请输入")
+            return new Error("please enter")
           }
           if (!itemValue.trim()) {
-            return new Error("空格无效")
+            return new Error("spaces are invalid")
           }
         }
       }
@@ -248,10 +248,10 @@ const xFormOpt = reactive<VxeFormProps>({
         required: true,
         validator: ({ itemValue }) => {
           if (!itemValue) {
-            return new Error("请输入")
+            return new Error("please enter")
           }
           if (!itemValue.trim()) {
-            return new Error("空格无效")
+            return new Error("spaces are invalid")
           }
         }
       }

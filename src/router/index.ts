@@ -49,51 +49,51 @@ export const constantRoutes: RouteRecordRaw[] = [
         component: () => import("@/views/dashboard/index.vue"),
         name: "Dashboard",
         meta: {
-          title: "首页",
+          title: "Dashboard",
           svgIcon: "dashboard",
           affix: true
         }
       }
     ]
   },
-  {
-    path: "/unocss",
-    component: Layout,
-    redirect: "/unocss/index",
-    children: [
-      {
-        path: "index",
-        component: () => import("@/views/unocss/index.vue"),
-        name: "UnoCSS",
-        meta: {
-          title: "unocss",
-          svgIcon: "unocss"
-        }
-      }
-    ]
-  },
-  {
-    path: "/link",
-    component: Layout,
-    children: [
-      {
-        path: "https://juejin.cn/post/7089377403717287972",
-        component: () => {},
-        name: "Link",
-        meta: {
-          title: "外链",
-          svgIcon: "link"
-        }
-      }
-    ]
-  },
+  // {
+  //   path: "/unocss",
+  //   component: Layout,
+  //   redirect: "/unocss/index",
+  //   children: [
+  //     {
+  //       path: "index",
+  //       component: () => import("@/views/unocss/index.vue"),
+  //       name: "UnoCSS",
+  //       meta: {
+  //         title: "UnoCSS",
+  //         svgIcon: "unocss"
+  //       }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: "/link",
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: "https://juejin.cn/post/7089377403717287972",
+  //       component: () => {},
+  //       name: "Link",
+  //       meta: {
+  //         title: "Link",
+  //         svgIcon: "link"
+  //       }
+  //     }
+  //   ]
+  // },
   {
     path: "/table",
     component: Layout,
     redirect: "/table/element-plus",
     name: "Table",
     meta: {
-      title: "表格",
+      title: "Sheet table",
       elIcon: "Grid"
     },
     children: [
@@ -123,7 +123,7 @@ export const constantRoutes: RouteRecordRaw[] = [
     redirect: "/menu/menu1",
     name: "Menu",
     meta: {
-      title: "多级菜单",
+      title: "Multilevel menu",
       svgIcon: "menu"
     },
     children: [
@@ -197,7 +197,7 @@ export const constantRoutes: RouteRecordRaw[] = [
     redirect: "/hook-demo/use-fetch-select",
     name: "HookDemo",
     meta: {
-      title: "hook 示例",
+      title: "Hook example",
       elIcon: "Menu",
       alwaysShow: true
     },
@@ -234,7 +234,7 @@ export const asyncRoutes: RouteRecordRaw[] = [
     redirect: "/permission/page",
     name: "Permission",
     meta: {
-      title: "权限管理",
+      title: "Authority management",
       svgIcon: "lock",
       roles: ["admin", "editor"], // 可以在根路由中设置角色
       alwaysShow: true // 将始终显示根菜单
@@ -245,7 +245,7 @@ export const asyncRoutes: RouteRecordRaw[] = [
         component: () => import("@/views/permission/page.vue"),
         name: "PagePermission",
         meta: {
-          title: "页面权限",
+          title: "page authority",
           roles: ["admin"] // 或者在子导航中设置角色
         }
       },
@@ -254,7 +254,7 @@ export const asyncRoutes: RouteRecordRaw[] = [
         component: () => import("@/views/permission/directive.vue"),
         name: "DirectivePermission",
         meta: {
-          title: "指令权限" // 如果未设置角色，则表示：该页面不需要权限，但会继承根路由的角色
+          title: "command authority" // 如果未设置角色，则表示：该页面不需要权限，但会继承根路由的角色
         }
       }
     ]
